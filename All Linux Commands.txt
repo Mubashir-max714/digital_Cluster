@@ -1,0 +1,54 @@
+libpython3-stdlib:arm64
+libpython3.10:arm64
+libpython3.10-minimal:arm64
+libpython3.10-stdlib:arm64
+python3
+python3-cupshelpers
+python3-minimal
+python3-uno
+python3.10-minimal
+
+sudo apt install python3.9
+sudo ln -s /usr/bin/python3.9 /usr/bin/python3
+
+python -m pip install --upgrade pip
+python -m pip install python==3.9.5
+sudo apt-get install python3-pip
+
+pip3 install virtualenv (installs here-> /home/raspberry/.local/bin)
+virtualenv picluster
+source picluster/bin/activate
+source /home/raspberry/.virtualenvs/piCluster/bin/activate
+
+sudo apt-get install qtbase5-dev
+pip3 install pyqt5
+pip3 install pyqt5 --config-settings --confirm-license= --verbose
+mkvirtualenv piCluster -p /usr/local/bin/python3.7 (no need to create symlink)
+
+sudo apt-get install cmake
+sudo apt-get install clang
+export LLVM_CONFIG=/usr/bin/clang
+sudo apt-get install libclang-dev
+from PySide2 import QtCore, QtGui, QtWidgets
+~/.virtualenvs/piCluster/lib/python3.7/site-packages $
+/usr/lib/python3/dist-packages/PySide2
+ls /dev/tty*
+
+Setting GUI and HDMI Resolution so, the GUI takes up the whole screen
+sudo nano /boot/config.txt
+hdmi_group=2
+hdmi_mode=87
+hdmi_cvt 1024 600 60 6 0 0 0
+hdmi_drive=1
+disable_overscan=1
+overscan_left=0
+overscan_right=0
+overscan_top=0
+overscan_bottom=0
+dtoverlay=vc4-fkms-v3d
+
+sudo apt install simplescreenrecorder
+start screenrecorder
+simplescreenrecorder
+
+pip install qtawesome
